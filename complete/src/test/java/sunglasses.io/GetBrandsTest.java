@@ -36,6 +36,6 @@ public class GetBrandsTest {
 
     //assert
     System.out.println(result.getStatusCodeValue());
-    Assert.isTrue(200 == result.getStatusCodeValue(), "Response status must be 200");
+    Assert.isTrue(result.getStatusCodeValue() == 200, "Response status must be 200");
   }
 }
