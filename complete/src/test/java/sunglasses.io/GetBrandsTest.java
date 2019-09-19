@@ -28,13 +28,14 @@ public class GetBrandsTest {
   public void testGetBrandsSuccess() throws URISyntaxException {
 
     //arrange
-    final String baseUrl = "http://localhost:" + randomServerPort + "/employees";
+    final String baseUrl = "http://localhost:" + randomServerPort + "/brands";
     URI uri = new URI(baseUrl);
 
     //act
     ResponseEntity<String> result = restTemplate.getForEntity(uri, String.class);
 
     //assert
+    System.out.println(result.getStatusCodeValue());
     Assert.isTrue(200 == result.getStatusCodeValue(), "Response status must be 200");
   }
 }
