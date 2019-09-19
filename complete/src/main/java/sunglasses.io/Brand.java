@@ -1,15 +1,19 @@
 package sunglasses.io;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Brand {
-  private static final AtomicInteger id = new AtomicInterger(0);
+  private static AtomicInteger idCount = new AtomicInteger(0);
+
+  private int id;
   private final String name;
 
   public Brand(String name) {
-    this.id = id.incrementAndGet();
+    this.id = idCount.incrementAndGet();
     this.name = name;
   }
 
-  public static AtomicInteger getId() {
+  public int getId() {
     return id;
   }
 
