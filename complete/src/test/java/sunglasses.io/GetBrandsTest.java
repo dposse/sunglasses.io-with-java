@@ -38,4 +38,9 @@ public class GetBrandsTest {
     System.out.println(result.getStatusCodeValue());
     Assert.isTrue(result.getStatusCodeValue() == 200, "Response status must be 200");
   }
+
+  @Test
+  public void testGetBrandsReturnsList() throws URISyntaxException {
+
+  }
 }
