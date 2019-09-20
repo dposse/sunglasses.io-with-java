@@ -4,11 +4,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class BrandController {
-  @RequestMapping(value = "/brands", method = RequestMethod.GET)
-  @ResponseBody
+  @Autowired
+  private BrandRepository repository;
+
+  //get all brands, return array
+  @GetMapping("/brands")
   public String getBrands() {
     return "not brands";
   }
