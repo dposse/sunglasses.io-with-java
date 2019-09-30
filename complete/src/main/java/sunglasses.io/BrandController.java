@@ -12,11 +12,11 @@ import java.util.List;
 @RestController
 public class BrandController {
   @Autowired
-  private BrandRepository repository;
+  BrandService brandService;
 
   //get all brands, return array
-  @GetMapping(value = "/brands", produces = MediaType.APPLICATION_JSON_VALUE)
-  List<Brand> getBrands() {
-    return null;
+  @GetMapping("/brands")
+  List<Brand> getAllBrands() {
+    return brandService.getAllBrands();
   }
 }

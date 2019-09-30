@@ -1,7 +1,3 @@
---Shouldn't have anything saved but just in case
-drop table if exists brand;
-drop table if exists product;
-
 --Brand information from brands.json
 insert into brand
 values(1, 'Oakley');
