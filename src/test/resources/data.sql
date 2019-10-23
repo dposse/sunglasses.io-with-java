@@ -1,3 +1,7 @@
+-- delete all rows in db tables, resets auto increment
+truncate table brand;
+truncate table product;
+
 --Brand information from brands.json
 insert into brand
 values(1, 'Oakley');

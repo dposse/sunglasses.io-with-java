@@ -3,8 +3,6 @@ package sunglasses.io;
 import java.util.*;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
-import sunglasses.io.Brand;
-import sunglasses.io.BrandRepository;
 
 @Service
 public class BrandService {
