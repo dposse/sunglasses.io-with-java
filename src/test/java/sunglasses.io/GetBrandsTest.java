@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Assert;
-import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.client.RestClientException;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -104,7 +104,7 @@ public class GetBrandsTest {
     Assert.isTrue(response.getBody().get(0).getName().equalsIgnoreCase("Ray Ban"), "Should return one brand with name 'Ray Ban' when searching 'ray ban'");
   }
 
-  @Test(expected = Re.class)
+  @Test(expected = RestClientException.class)
   public void testGetBrandsSearchBall() throws URISyntaxException {
     //arrange
     final String searchTerm = "ball";
